@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo ""
+echo " -> Connection au server"
+echo ""
+
+ssh root@51.15.20.32 -t 'cd /data/www/ledrakkar-coworking.fr/public; bin/update; exit'
+
+echo ""
+echo " -> code déployé en prod sur https://www.ledrakkar-coworking.fr/ !"
+echo ""
+
+
+curl https://www.ledrakkar-coworking.fr/ -I
+paplay /usr/share/sounds/freedesktop/stereo/complete.oga
