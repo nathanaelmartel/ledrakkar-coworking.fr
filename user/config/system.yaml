@@ -46,3 +46,7 @@ debugger:
     close_connection: true
 gpm:
   verify_peer: true
+
+session:
+  enabled:true
+  initialize:false
