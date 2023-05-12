@@ -1,5 +1,8 @@
 #!/bin/bash
 
+git push
+git push --tag
+
 echo ""
 echo " -> Connection au server"
 echo ""
