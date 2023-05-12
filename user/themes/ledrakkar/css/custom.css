@@ -1,0 +1,15 @@
+body {
+
+}
+
+.feature-icon i {
+    color:#cd2653 !important;
+}
+
+.modular-members img {
+    border-radius: 50%;
+}
+.modular-members h2 {
+    font-size: 1rem;
+    margin-top:.5em;
+}

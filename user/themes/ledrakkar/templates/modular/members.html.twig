@@ -1,0 +1,53 @@
+<section class="section modular-features modular-members offset-box ">
+    <section class="container grid-lg">
+
+            <div class="frame-box">
+
+                {{ content|raw }}
+
+                <div class="columns">
+                {% for member in page.header.members %}
+                   <div class="column col-4 col-md-6 col-sm-12">
+                      <div class="">
+                          {{ page.media[member.image]|raw }}
+                      </div>
+                      <div class="feature-content">
+                          <h2>{{ member.name }}</h2>
+                         <p>
+                             {% if member.url %}
+                             <a href="{{ member.url }}" target="_blank">
+                                 {{ member.title|nl2br }}
+                             </a>
+                             {% else %}
+                             {{ member.title|nl2br }}
+                             {% endif %}
+                             <br>
+                             {% if member.instagram %}
+                                 <a href="{{ member.instagram }}" target="_blank">
+                                     <i class="fa-brands fa-instagram"></i>
+                                 </a>
+                             {% endif %}
+                             {% if member.linkedin %}
+                                 <a href="{{ member.linkedin }}" target="_blank">
+                                     <i class="fa-brands fa-linkedin"></i>
+                                 </a>
+                             {% endif %}
+                             {% if member.mastodon %}
+                                 <a href="{{ member.mastodon }}" target="_blank">
+                                     <i class="fa-brands fa-mastodon"></i>
+                                 </a>
+                             {% endif %}
+                             {% if member.twitter %}
+                                 <a href="{{ member.twitter }}" target="_blank">
+                                     <i class="fa-brands fa-twitter"></i>
+                                 </a>
+                             {% endif %}
+                         </p>
+                      </div>
+                   </div>
+                {% endfor %}
+                </div>
+            </div>
+
+    </section>
+</section>

@@ -1,0 +1,14 @@
+title: Le Drakkar Coworking
+author:
+  name: Nathanaël Martel
+  email: 'nathanael@simplement-web.com'
+metadata:
+    description: 'Espace de travail partagé, espace de coworking de la vallée de l’Eyrieux, Les Ollières sur Eyrieux'
+default_lang: fr
+
+owner:
+  name:           Nathanaël Martel
+  email:          nathanael@simplement-web.com
+  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
+  description:    D&#233;veloppeur Symfony, Certifi&#233; qualit&#233; Web
+  github:         nathanaelmartel
