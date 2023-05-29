@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# find . -iname "*.jpg" | xargs jpegoptim --strip-all --max=50
+
 git push
 git push --tag
 
