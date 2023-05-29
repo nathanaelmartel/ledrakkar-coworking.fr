@@ -50,3 +50,17 @@ gpm:
 session:
   enabled:true
   initialize:false
+
+languages:
+  supported:
+    - fr
+  default_lang: fr
+  include_default_lang: true
+  include_default_lang_file_extension: true
+  translations: true
+  translations_fallback: true
+  session_store_active: false
+  http_accept_language: false
+  override_locale: false
+  content_fallback: {  }
+  pages_fallback_only: false
