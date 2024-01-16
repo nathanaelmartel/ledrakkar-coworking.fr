@@ -8,7 +8,6 @@ git reset --hard origin/main
 git status | grep ".bak" | xargs -r rm
 git status | grep ".ico" | xargs -r rm
 
-cd cache
 chown www-data:www-data -R .
 
 bin/grav clearcache
