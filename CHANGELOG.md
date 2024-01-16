@@ -1,3 +1,100 @@
+# v1.7.44
+## 01/05/2024
+
+1. [](#new)
+   * Added PHP `8.3` to tests [#3782](https://github.com/getgrav/grav/pull/3782)
+   * Added debugger messages when Page routes conflict
+   * Added `ISO 8601` date format [#3721](https://github.com/getgrav/grav/pull/37210)
+   * Added support for `.vcf` (vCard) in media configuration [#3772](https://github.com/getgrav/grav/pull/3772)
+1. [](#improved) 
+   * Update jQuery to `v3.6.4` [#3713](https://github.com/getgrav/grav/pull/3713)
+   * Updated vendor libraries including Dom-Sanitizer `v1.0.7` that addresses an XSS issue 
+   * Updated `bin/composer.phar` to latest `2.6.6`
+   * Updated vendor libraries to latest
+   * Updated language files
+   * Updated copyright year
+1. [](#bugfix)
+   * Fixed a math rounding issue with number validation when using floating point steps [#3761](https://github.com/getgrav/grav/issues/3761)
+   * Fixed an issue with `Inflector::ordinalize()` not working as expected [#3759](https://github.com/getgrav/grav/pull/3759)
+   * Fixed various issues with file extension checking with dangerous extensions [#3756(https://github.com/getgrav/grav/pull/3756)]
+   * Fix for invalid input to foreach in `UserGroupObject` [#3724](https://github.com/getgrav/grav/pull/3724)
+   * Fixed exception: `Property 'jsmodule_pipeline_include_externals' does not exist in object` [#3661](https://github.com/getgrav/grav/pull/3661)
+   * Fixed `too few arguments exception` in FlexObjects [#3658](https://github.com/getgrav/grav/pull/3658)
+
+# v1.7.43
+## 10/02/2023
+
+1. [](#new)
+   * Add the ability to programatically set a page's `modified` timestamp via a `modified:` frontmatter entry
+2. [](#improved)
+   * Update vendor libraries
+   * Include `phar` in the list of `security.uploads_dangerous_extensions`
+   * When enabled `system.languages.debug` now dumps **Key -> Value** to debugger [#3752](https://github.com/getgrav/grav/issues/3752)
+   * Updated built-in composer to latest `2.6.4` [#3748](https://github.com/getgrav/grav/issues/3748)
+   * Added support for `@import` to ensure paths are rewritten correctly in CSS pipeline [#3750](https://github.com/getgrav/grav/pull/3750)
+
+# v1.7.42.3
+## 07/18/2023
+
+2. [](#improved)
+   * Fixed a typo in `Utils::isDangerousFunction`
+
+# v1.7.42.2
+## 07/18/2023
+
+2. [](#improved)
+   * In `Utils::isDangerousFunction`, handle double `\\` in `|map` twig filter to mitigate SSTI attack
+   * Better handle empty email in `Validatoin::typeEmail()`
+
+# v1.7.42.1
+## 06/15/2023
+
+2. [](#improved)
+   * Quick fix for `isDangerousFunction` when `$name` was a closure [#3727](https://github.com/getgrav/grav/issues/3727)
+
+# v1.7.42
+## 06/14/2023
+
+1. [](#new)
+   * Added a new `system.languages.debug` option that adds a `<span class="translate-debug"></span>` around strings translated with `|t`. This can be styled by the theme as needed.
+1. [](#improved)
+   * More robust SSTI handling in `filter`, `map`, and `reduce` Twig filters and functions
+   * Various SSTI improvements `Utils::isDangerousFunction()`
+1. [](#bugfix)
+   * Fixed Twig `|map()` allowing code execution
+   * Fixed Twig `|reduce()` allowing code execution
+
+# v1.7.41.2
+## 06/01/2023
+
+1. [](#improved)
+   * Added the ability to set a configurable 'key' for the Twig Cache Tag: `{% cache 'my-key' 600 %}`
+1. [](#bugfix)
+   * Fixed an issue with special characters in slug's would cause redirect loops
+
+# v1.7.41.1
+## 05/10/2023
+
+1. [](#bugfix)
+   * Fixed certain UTF-8 characters breaking `Truncator` class [#3716](https://github.com/getgrav/grav/issues/3716)
+
+# v1.7.41
+## 05/09/2023
+
+1. [](#improved)
+   * Removed `FILTER_SANITIZE_STRING` input filter in favor of `htmlspecialchars(strip_tags())` for PHP 8.2+
+   * Added `GRAV_SANITIZE_STRING` constant to replace `FILTER_SANITIZE_STRING` for PHP 8.2+
+   * Support non-deprecated style dynamic properties in `Parsedown` class via `ParseDownGravTrait` for PHP 8.2+
+   * Modified `Truncator` to not use deprecated `mb_convert_encoding()` for PHP 8.2+
+   * Fixed passing null into `mb_strpos()` deprecated for PHP 8.2+
+   * Updated internal `TwigDeferredExtension` to be PHP 8.2+ compatible
+   * Upgraded `getgrav/image` fork to take advantage of various PHP 8.2+ fixes
+   * Use `UserGroupObject::groupNames` method in blueprints for PHP 8.2+
+   * Comment out `files-upload` deprecated message as this is not going to be removed
+   * Added various public `Twig` class variables used by admin to address deprecated messages for PHP 8.2+
+   * Added `parse_url` to list of PHP functions supported in Twig Extension
+   * Added support for dynamic functions in `Parsedown` to stop deprecation messages in PHP 8.2+
+ 
 # v1.7.40
 ## 03/22/2023
 

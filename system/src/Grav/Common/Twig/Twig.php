@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Common\Twig
  *
- * @copyright  Copyright (c) 2015 - 2023 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2024 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -56,6 +56,15 @@ class Twig
     public $twig_paths;
     /** @var string */
     public $template;
+
+    /** @var array */
+    public $plugins_hooked_nav = [];
+    /** @var array */
+    public $plugins_quick_tray = [];
+    /** @var array */
+    public $plugins_hooked_dashboard_widgets_top = [];
+    /** @var array */
+    public $plugins_hooked_dashboard_widgets_main = [];
 
     /** @var Grav */
     protected $grav;

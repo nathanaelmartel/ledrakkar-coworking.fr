@@ -30,7 +30,6 @@
       <path value="$PROJECT_DIR$/vendor/multiavatar/multiavatar-php" />
       <path value="$PROJECT_DIR$/vendor/donatj/phpuseragentparser" />
       <path value="$PROJECT_DIR$/vendor/rockettheme/toolbox" />
-      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
       <path value="$PROJECT_DIR$/vendor/miljar/php-exif" />
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
